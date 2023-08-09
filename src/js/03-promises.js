@@ -29,7 +29,6 @@ function submitPromise (event) {
 
   timerId = setInterval(() => {
     createPromise(positionP, delayP)
-
     .then((value) => {
       Notiflix.Notify.success(value,{timeout: 4000,},);
     })
@@ -44,5 +43,5 @@ function submitPromise (event) {
     if (!amountInter) {
       clearInterval(timerId);
     }
-  }, 1000);
+  }, step.value);
 }
